@@ -1,0 +1,179 @@
+:root {
+  --white: #ffffff;
+  --white-soft: rgba(255, 255, 255, 0.28);
+  --ink: rgba(0, 0, 0, 0.72);
+  --u: 1;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  overflow: hidden;
+  font-family: "Lobster", cursive;
+  color: var(--white);
+}
+
+body {
+  display: block;
+}
+
+.widget {
+  width: calc(1480px * var(--u));
+  padding: calc(36px * var(--u)) calc(40px * var(--u)) calc(28px * var(--u)) calc(32px * var(--u));
+  cursor: pointer;
+  user-select: none;
+  color: var(--white);
+  text-align: left;
+  filter: drop-shadow(0 8px 18px rgba(0, 0, 0, 0.35));
+}
+
+.visualizer {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  gap: calc(10px * var(--u));
+  height: calc(260px * var(--u));
+  margin-bottom: calc(28px * var(--u));
+}
+
+.bar {
+  width: calc(22px * var(--u));
+  height: calc(28px * var(--u));
+  border-radius: 999px;
+  background: var(--white);
+  box-shadow: 0 0 calc(18px * var(--u)) rgba(255, 255, 255, 0.35);
+  transform-origin: bottom center;
+}
+
+.info {
+  min-width: 0;
+}
+
+.title-wrap {
+  overflow: hidden;
+  width: 100%;
+  -webkit-mask-image: linear-gradient(90deg, #000 0%, #000 82%, transparent 100%);
+  mask-image: linear-gradient(90deg, #000 0%, #000 82%, transparent 100%);
+}
+
+.title-track {
+  --title-gap: calc(80px * var(--u));
+  --title-shift: calc(40px * var(--u));
+  display: inline-flex;
+  align-items: baseline;
+  gap: var(--title-gap);
+  width: max-content;
+  white-space: nowrap;
+}
+
+.title-track.is-scrolling {
+  animation: title-scroll var(--title-speed, 14s) linear infinite;
+}
+
+.title {
+  font-family: "Lobster", cursive;
+  font-size: calc(96px * var(--u));
+  font-weight: 400;
+  line-height: 1.1;
+  white-space: nowrap;
+  text-shadow:
+    0 2px 4px rgba(0, 0, 0, 0.85),
+    0 4px 28px var(--ink);
+}
+
+.title-copy {
+  display: none;
+}
+
+.title-track.is-scrolling .title-copy {
+  display: block;
+}
+
+@keyframes title-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-50% - var(--title-shift)));
+  }
+}
+
+.artist {
+  margin-top: calc(8px * var(--u));
+  font-family: "Lobster", cursive;
+  font-size: calc(42px * var(--u));
+  font-weight: 400;
+  color: var(--white);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-shadow:
+    0 2px 4px rgba(0, 0, 0, 0.75),
+    0 4px 20px var(--ink);
+}
+
+.progress {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  justify-items: start;
+  gap: calc(20px * var(--u));
+  margin-top: calc(24px * var(--u));
+}
+
+.time {
+  min-width: calc(70px * var(--u));
+  font-family: "Lobster", cursive;
+  font-size: calc(32px * var(--u));
+  font-variant-numeric: tabular-nums;
+  color: var(--white);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8), 0 2px 16px var(--ink);
+}
+
+.time:last-child {
+  justify-self: end;
+}
+
+.track {
+  appearance: none;
+  position: relative;
+  width: 100%;
+  height: calc(42px * var(--u));
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  overflow: visible;
+}
+
+.track canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.hint {
+  margin-top: calc(20px * var(--u));
+  font-family: "Lobster", cursive;
+  font-size: calc(32px * var(--u));
+  color: var(--white);
+  text-align: left;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8), 0 2px 16px var(--ink);
+}
+
+.widget.is-blocked .hint {
+  opacity: 1;
+}
+
+.widget.is-paused .bar {
+  opacity: 0.55;
+}

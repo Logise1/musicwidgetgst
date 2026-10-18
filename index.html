@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Xmas OST</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css?v=9" />
+  </head>
+  <body>
+    <main class="widget" id="widget" aria-label="Reproductor">
+      <div class="visualizer" id="visualizer" aria-hidden="true"></div>
+
+      <div class="info">
+        <div class="title-wrap" id="titleWrap">
+          <div class="title-track" id="titleTrack">
+            <p class="title" id="title">Cargando…</p>
+            <p class="title title-copy" id="titleCopy" aria-hidden="true"></p>
+          </div>
+        </div>
+        <p class="artist" id="artist">—</p>
+
+        <div class="progress">
+          <span class="time" id="current">0:00</span>
+          <button class="track" id="seek" type="button" aria-label="Progreso">
+            <canvas id="wave"></canvas>
+          </button>
+          <span class="time" id="duration">0:00</span>
+        </div>
+      </div>
+
+      <p class="hint" id="hint">Clic para reproducir</p>
+    </main>
+
+    <audio id="audio" preload="auto"></audio>
+    <script src="app.js?v=11"></script>
+  </body>
+</html>
