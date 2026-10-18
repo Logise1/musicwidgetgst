@@ -8,40 +8,26 @@ const KEY_PAUSED = "xmas-ost-paused";
 const KEY_INDEX = "xmas-ost-index";
 
 const FALLBACK_TRACKS = [
-  { file: "01 - Frank Sinatra, Seal - Santa Claus Is Coming To Town.m4a", title: "Santa Claus Is Coming To Town", artist: "Frank Sinatra, Seal" },
-  { file: "02 - Jamie Cullum - All I Want For Christmas Is You (Mariah Carey). The Song Society No.11.m4a", title: "All I Want For Christmas Is You", artist: "Jamie Cullum" },
-  { file: "03 - Ella Fitzgerald, Louis Armstrong - I've Got My Love To Keep Me Warm (Official Video).m4a", title: "I've Got My Love To Keep Me Warm", artist: "Ella Fitzgerald, Louis Armstrong" },
-  { file: "04 - Last Christmas.m4a", title: "Last Christmas", artist: "Christmas Jazz Lounge" },
-  { file: "05 - uChill, Ramsey Lewis Trio - Winter Wonderland (Slowed + Reverb⧸Visualizer).m4a", title: "Winter Wonderland", artist: "uChill, Ramsey Lewis Trio" },
-  { file: "06 - Jamie Cullum - Turn On The Lights.m4a", title: "Turn On The Lights", artist: "Jamie Cullum" },
-  { file: "07 - Louis Armstrong - Cool Yule (Lyric Video) ft. The Commanders.m4a", title: "Cool Yule", artist: "Louis Armstrong" },
-  { file: "08 - Nat King Cole - The Christmas Song (Merry Christmas To You).m4a", title: "The Christmas Song (Merry Christmas To You)", artist: "Nat King Cole" },
-  { file: "09 - Ella Fitzgerald - Sleigh Ride (Official Video).m4a", title: "Sleigh Ride", artist: "Ella Fitzgerald" },
-  { file: "10 - Jamie Cullum, Kansas Smitty's - Winter Wonderland.m4a", title: "Winter Wonderland", artist: "Jamie Cullum, Kansas Smitty's" },
-  { file: "11 - Ella Fitzgerald - Santa Claus Is Coming To Town.m4a", title: "Santa Claus Is Coming To Town", artist: "Ella Fitzgerald" },
-  { file: "12 - White Christmas (Official Video).m4a", title: "White Christmas", artist: "Christmas Jazz Lounge" },
-  { file: "13 - Ella Fitzgerald - Frosty The Snowman (Official Video).m4a", title: "Frosty The Snowman", artist: "Ella Fitzgerald" },
-  { file: "14 - Dean Martin - Let It Snow! Let It Snow! Let It Snow! (Official Video).m4a", title: "Let It Snow! Let It Snow! Let It Snow!", artist: "Dean Martin" },
-  { file: "15 - Frank Sinatra - Jingle Bells (Official Music Video).m4a", title: "Jingle Bells", artist: "Frank Sinatra" },
-  { file: "16 - Peggy Lee ＂It's Christmas Time Again＂.m4a", title: "It's Christmas Time Again", artist: "Peggy Lee" },
-  { file: "17 - I Saw Mommy Kissing Santa Claus (Live At Union Chapel ⧸ BBC Radio 2).m4a", title: "I Saw Mommy Kissing Santa Claus", artist: "Christmas Jazz Lounge" },
-  { file: "18 - Dean Martin - I've Got My Love To Keep Me Warm (Official Music Video).m4a", title: "I've Got My Love To Keep Me Warm", artist: "Dean Martin" },
-  { file: "19 - Bing Crosby - Winter Wonderland (Official Video).m4a", title: "Winter Wonderland", artist: "Bing Crosby" },
-  { file: "20 - Frank Sinatra - The Christmas Waltz (Official Video).m4a", title: "The Christmas Waltz", artist: "Frank Sinatra" },
-  { file: "21 - Frank Sinatra - Mistletoe And Holly (Official Video).m4a", title: "Mistletoe And Holly", artist: "Frank Sinatra" },
-  { file: "22 - Ella Fitzgerald - Rudolph The Red-Nosed Reindeer (Official Audio).m4a", title: "Rudolph The Red-Nosed Reindeer", artist: "Ella Fitzgerald" },
-  { file: "23 - Dean Martin - Baby, It's Cold Outside (Lyric Video).m4a", title: "Baby, It's Cold Outside", artist: "Dean Martin" },
-  { file: "24 - Louis Prima - Pennies From Heaven (Official Audio).m4a", title: "Pennies From Heaven", artist: "Louis Prima" },
-  { file: "25 - Nat King Cole - Deck The Halls (Lyric Video).m4a", title: "Deck The Halls", artist: "Nat King Cole" },
-  { file: "26 - Ella Fitzgerald - Have Yourself A Merry Little Christmas (Official Audio).m4a", title: "Have Yourself A Merry Little Christmas", artist: "Ella Fitzgerald" },
-  { file: "27 - Gwen Stefani - Santa Baby (Audio).m4a", title: "Santa Baby", artist: "Gwen Stefani" },
-  { file: "28 - Here Comes Santa Claus.m4a", title: "Here Comes Santa Claus", artist: "Christmas Jazz Lounge" },
-  { file: "29 - Christmas Time Is Here (Vocal).m4a", title: "Christmas Time Is Here (Vocal)", artist: "Christmas Jazz Lounge" },
-  { file: "30 - Bing Crosby, The Andrews Sisters - Mele Kalikimaka.m4a", title: "Mele Kalikimaka", artist: "Bing Crosby, The Andrews Sisters" },
-  { file: "31 - Nat King Cole - Hark! The Herald Angels Sing (Visualizer).m4a", title: "Hark! The Herald Angels Sing", artist: "Nat King Cole" },
-  { file: "32 - Louis Armstrong, Benny Carter And His Orchestra - Christmas In New Orleans (Audio).m4a", title: "Christmas In New Orleans", artist: "Louis Armstrong, Benny Carter And His Orchestra" },
-  { file: "33 - Kay Starr ＂(Everybody's Waitin' For) The Man With The Bag＂ (Official Visualizer).m4a", title: "(Everybody's Waitin' For) The Man With The Bag", artist: "Kay Starr" },
-  { file: "34 - Show Me The Magic.m4a", title: "Show Me The Magic", artist: "Christmas Jazz Lounge" },
+  { file: "8-bit Village theme.mp3", title: "8-bit Village Theme", artist: "GST" },
+  { file: "Build & Bolt theme #01 (2020).mp3", title: "Build & Bolt Theme #01 (2020)", artist: "GST" },
+  { file: "Build & Bolt theme #02 (2020).mp3", title: "Build & Bolt Theme #02 (2020)", artist: "GST" },
+  { file: "Easter GST Remix (Logise).mp3", title: "Easter GST Remix", artist: "Logise" },
+  { file: "Halloween GST Remix (Logise).mp3", title: "Halloween GST Remix", artist: "Logise" },
+  { file: "ho-ho-ho-merry-christmas.mp3", title: "Ho Ho Ho Merry Christmas", artist: "GST" },
+  { file: "Jazzy GST Remix (Logise).mp3", title: "Jazzy GST Remix", artist: "Logise" },
+  { file: "Main Village theme #2.mp3", title: "Main Village Theme #2", artist: "GST" },
+  { file: "Main Village theme #3.mp3", title: "Main Village Theme #3", artist: "GST" },
+  { file: "Main Village Theme 2015-2017.mp3", title: "Main Village Theme 2015-2017", artist: "GST" },
+  { file: "Main Village Theme 2018-2023.mp3", title: "Main Village Theme 2018-2023", artist: "GST" },
+  { file: "Search Theme.mp3", title: "Search Theme", artist: "GST" },
+  { file: "Space GST Remix (Logise).mp3", title: "Space GST Remix", artist: "Logise" },
+  { file: "Village #2 (2014).mp3", title: "Village #2 (2014)", artist: "GST" },
+  { file: "Village #2 (2017).mp3", title: "Village #2 (2017)", artist: "GST" },
+  { file: "Village #3 (2014).mp3", title: "Village #3 (2014)", artist: "GST" },
+  { file: "Village Daytime Theme 2012-2014.mp3", title: "Village Daytime Theme 2012-2014", artist: "GST" },
+  { file: "Wrap battle ( Song 2).mp3", title: "Wrap Battle (Song 2)", artist: "GST" },
+  { file: "Wrap battle music (Song 1).mp3", title: "Wrap Battle Music (Song 1)", artist: "GST" },
+  { file: "Wrap Battle music Part #1 (EXTENDED).mp3", title: "Wrap Battle Music Part #1 (Extended)", artist: "GST" },
 ];
 
 const widget = document.getElementById("widget");
@@ -80,10 +66,11 @@ for (let i = 0; i < BAR_COUNT; i += 1) {
 }
 
 function parseTrack(file) {
-  let name = file.replace(/\.m4a$/i, "").replace(/^\d+\s*-\s*/, "");
+  let name = file.replace(/\.(mp3|m4a)$/i, "").replace(/^\d+\s*-\s*/, "");
   const quoted = name.match(/^(.+?)\s*[＂"](.+)[＂"]/);
   let artist;
   let title;
+  const credited = name.match(/^(.*?)\s*\(\s*([^)]+?)\s*\)\s*$/);
 
   if (quoted) {
     artist = quoted[1].trim();
@@ -92,18 +79,26 @@ function parseTrack(file) {
     const idx = name.indexOf(" - ");
     artist = name.slice(0, idx).trim();
     title = name.slice(idx + 3).trim();
+  } else if (credited && !/^\d{4}(?:\s*[-–]\s*\d{4})?$/.test(credited[2]) && !/^(song\s*\d+|extended)$/i.test(credited[2])) {
+    title = credited[1].trim();
+    artist = credited[2].trim();
   } else {
-    artist = "Christmas Jazz Lounge";
+    artist = "GST";
     title = name;
+  }
+
+  if (title.includes("-") && !title.includes(" ")) {
+    title = title
+      .split("-")
+      .filter(Boolean)
+      .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+      .join(" ");
   }
 
   title = title
     .replace(/\s*\((?:Official(?:\s+(?:Video|Audio|Music Video|Visualizer))?|Lyric Video|Audio|Visualizer)\)/gi, "")
-    .replace(/\s*\. The Song Society No\.\d+/i, "")
-    .replace(/\s*\(Mariah Carey\)/i, "")
-    .replace(/\s*\(Slowed \+ Reverb.Visualizer\)/i, "")
-    .replace(/\s*ft\. The Commanders/i, "")
-    .replace(/\s*\(Live At Union Chapel . BBC Radio 2\)/i, "")
+    .replace(/\s*\(\s+/g, " (")
+    .replace(/\s+/g, " ")
     .trim();
 
   return { file, title, artist };
@@ -113,7 +108,7 @@ async function loadPlaylist() {
   try {
     const response = await fetch(`${MUSIC_DIR}/`);
     const html = await response.text();
-    const files = [...html.matchAll(/href="([^"]+\.m4a)"/gi)]
+    const files = [...html.matchAll(/href="([^"]+\.(?:mp3|m4a))"/gi)]
       .map((match) => decodeURIComponent(match[1].split("/").pop()))
       .filter(Boolean);
     if (files.length) return files.map(parseTrack);
